@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Flowapp1"
+    android:background="#E8F5F4"
+    android:padding="30dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp">
+
+
+        <ImageView
+            android:id="@+id/bare2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="94dp"
+            android:src="@drawable/baremedical2" />
+        <ImageView
+            android:id="@+id/bare1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/baremedical"
+            />
+
+        <ImageView
+            android:id="@+id/bare3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baremedical2"
+            android:layout_marginStart="10dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="274dp"
+        android:layout_height="61dp"
+        android:layout_below="@id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="113dp"
+        android:text="Select Pharmacy"
+
+        android:textSize="33dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/Description"
+        android:layout_width="375dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/tvHeader"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:text="Pick the pharmacy you want to go to"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="462dp"
+        android:layout_below="@id/Description"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="56dp"
+        android:src="@drawable/pharmacie" />
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#1A998E"/>
+
+</RelativeLayout>

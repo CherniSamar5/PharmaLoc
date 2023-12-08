@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#E8F5F4"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp">
+
+        <ImageView
+            android:id="@+id/bare1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="94dp"
+            android:src="@drawable/baremedical"
+            />
+
+        <ImageView
+            android:id="@+id/bare2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baremedical2"
+            android:layout_marginStart="10dp" />
+
+        <ImageView
+            android:id="@+id/bare3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baremedical2"
+            android:layout_marginStart="10dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="274dp"
+        android:layout_height="61dp"
+        android:layout_below="@id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="113dp"
+        android:text="Find Medicines"
+
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHeader"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:text="Easily find your prescribed medicines from a variety of registered pharmacies, no matter where you are."
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivMedicine"
+        android:layout_width="387dp"
+        android:layout_height="308dp"
+        android:layout_below="@id/Description"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/medicalimage" />
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#1A998E"/>
+
+
+</RelativeLayout>

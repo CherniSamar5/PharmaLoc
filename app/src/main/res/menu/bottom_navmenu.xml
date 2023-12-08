@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24"
+        android:id="@+id/menu_home"/> <!-- Utilisation de "menu_home" au lieu de "home" -->
+    <item
+        android:title="Discover"
+        android:icon="@drawable/searchicon"
+        android:id="@+id/menu_discover"/> <!-- Utilisation de "menu_discover" au lieu de "discover" -->
+    <item
+        android:title="Stores"
+        android:icon="@drawable/baseline_settings_24"
+        android:id="@+id/menu_stores"/> <!-- Utilisation de "menu_stores" au lieu de "stores" -->
+    <item
+        android:title="Account"
+        android:icon="@drawable/baseline_person_24"
+        android:id="@+id/menu_account"/> <!-- Utilisation de "menu_account" au lieu de "account" -->
+</menu>
