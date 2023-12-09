@@ -1,4 +1,5 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+   <group android:checkableBehavior="single">
     <item
         android:title="Home"
         android:icon="@drawable/baseline_home_24"
@@ -15,4 +16,5 @@
         android:title="Account"
         android:icon="@drawable/baseline_person_24"
         android:id="@+id/menu_account"/> <!-- Utilisation de "menu_account" au lieu de "account" -->
+   </group>
 </menu>

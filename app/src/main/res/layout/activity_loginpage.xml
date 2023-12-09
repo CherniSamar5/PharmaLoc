@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E8F5F4"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:id="@+id/fromLogin">
 
 
     <ImageView

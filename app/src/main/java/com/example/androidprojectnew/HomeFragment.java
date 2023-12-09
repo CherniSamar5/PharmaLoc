@@ -1,37 +1,26 @@
 package com.example.androidprojectnew;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.example.androidprojectnew.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private FragmentHomeBinding binding;
+    TextView usernameTextView;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public HomeFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
@@ -42,18 +31,63 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        return binding.getRoot();
+        // Replace the contents of the FrameLayout with the HomeFragment
+
+
     }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        usernameTextView = getView().findViewById(R.id.username_textview);
+
+
+        SharedPreferences preferences = requireContext().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+        String storedValue = preferences.getString("cle", "defaultValue");
+        usernameTextView.setText(" " + storedValue);
+
+        // Check if arguments are not null and set the username
+        if (getArguments() != null) {
+            String username = getArguments().getString(ARG_PARAM1);
+
+            if (username != null) {
+                // Do something with the username in your fragment
+                Log.d("HomeFragment", "Received Username: " + username);
+
+                // For example, display the username in a TextView
+                //usernameTextView.setText("  " + "samar");
+            }
+        }
+
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+
+            if (item.getItemId() == R.id.menu_home) {
+                replaceFragment(new HomeFragment());
+            } else if (item.getItemId() == R.id.menu_discover) {
+                replaceFragment(new DiscoverFragment());
+            } else if (item.getItemId() == R.id.menu_stores) {
+                replaceFragment(new StoresFragment());
+            } else if (item.getItemId() == R.id.menu_account) {
+                replaceFragment(new AccountFragment());
+            }
+            return true;
+        });
+    }
+
+    // Your existing method for replacing fragments
+    protected void replaceFragment(Fragment fragment) {
+
+        getParentFragmentManager().beginTransaction()
+                .replace(R.id.frameLayout, fragment)
+                .commit();
+
+
+
+    }
+
 }

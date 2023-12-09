@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "853887092704",
+    "firebase_url": "https://fir-login-signup-69d6b-default-rtdb.firebaseio.com",
     "project_id": "fir-login-signup-69d6b",
     "storage_bucket": "fir-login-signup-69d6b.appspot.com"
   },
@@ -29,6 +30,25 @@
         "mobilesdk_app_id": "1:853887092704:android:2644dfab9cc4bdcbf84d85",
         "android_client_info": {
           "package_name": "com.example.androidprojectnew"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXXN4HtQ-tHigKZfVEHsUfYHTBhqkEK34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853887092704:android:f17c769c58dba338f84d85",
+        "android_client_info": {
+          "package_name": "com.example.pahrmaloc"
         }
       },
       "oauth_client": [],
